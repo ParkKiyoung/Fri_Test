@@ -201,8 +201,8 @@ public class FriendView extends JFrame {
 					ArrayList<Friend> arr = dba.friendView();
 					for (int i = 0; i < arr.size(); i++) {
 						ta.append("고유번호 : "+arr.get(i).getNum()+"\n");
-						ta.append("?���? : " + arr.get(i).getName() + "\n");
-						ta.append("?��?�� : " + arr.get(i).getBirth() + "\n");
+						ta.append("이름 : " + arr.get(i).getName() + "\n");
+						ta.append("생년월일 : " + arr.get(i).getBirth() + "\n");
 						ta.append("번호 : " + arr.get(i).getPhone() + "\n");
 						ta.append("주소 : " + arr.get(i).getAddr() + "\n\n");
 					}
@@ -224,7 +224,7 @@ public class FriendView extends JFrame {
 					f.setPhone(tfPhone.getText());
 					f.setAddr(tfAddr.getText());
 					dba.friendInsert(f);
-					ta.setText(tfName.getText() + " 추�??���?");
+					ta.setText(tfName.getText() + " 추가완료");
 					tfName.setText("");
 					tfBirth.setText("");
 					tfPhone.setText("");
@@ -304,13 +304,13 @@ public class FriendView extends JFrame {
 					String str = tfSearch.getText();
 					int idx = comSet.getSelectedIndex();
 					if (idx == 0) {
-						tfSearch.setText("?��목선?�� ?��?��");
+						tfSearch.setText("항목선택");
 					}
 					ArrayList<Friend> arr = dba.friendSearch(str, idx);
 					for (int i = 0; i < arr.size(); i++) {
 						ta.append("고유번호 : " + arr.get(i).getNum() + "\n");
-						ta.append("?���? : " + arr.get(i).getName() + "\n");
-						ta.append("?��?�� : " + arr.get(i).getBirth() + "\n");
+						ta.append("이름 : " + arr.get(i).getName() + "\n");
+						ta.append("생년월일 : " + arr.get(i).getBirth() + "\n");
 						ta.append("번호 : " + arr.get(i).getPhone() + "\n");
 						ta.append("주소 : " + arr.get(i).getAddr() + "\n\n");
 
@@ -347,9 +347,9 @@ public class FriendView extends JFrame {
 						btnUpdate.setEnabled(true);
 						btnDelete.setEnabled(true);
 					} catch (NumberFormatException a) {
-						JOptionPane.showMessageDialog(null, "?��?���? ?��?��?��?��?��");
+						JOptionPane.showMessageDialog(null, "번호 입력요망");
 					} catch (NullPointerException a) {
-						JOptionPane.showMessageDialog(null, "친구�? ?��?��?��?��. ?��?��?? ?��?��?��?��?��.");
+						JOptionPane.showMessageDialog(null, "친구번호 입력 요망.");
 					}
 				}
 			});
@@ -371,7 +371,7 @@ public class FriendView extends JFrame {
 					f.setPhone(tfPhone.getText());
 					f.setAddr(tfAddr.getText());
 					dba.friendUpdate(f, num);
-					ta.append(tfName.getText() + "?�� ?��보�? ?��?��?��?��?��?��?��.");
+					ta.append(tfName.getText() + "수정되었음.");
 
 				}
 			});
@@ -387,11 +387,11 @@ public class FriendView extends JFrame {
 			btnDelete.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 			int result = JOptionPane.showConfirmDialog
-					(null, tfName.getText()+"�? ?��?��?��?��?���? ?��?��?��르세?��","?��?��?��?��",JOptionPane.YES_NO_OPTION);
+					(null, tfName.getText()+" 삭제하시겠습니까?","삭제확인",JOptionPane.YES_NO_OPTION);
 			if(result == JOptionPane.YES_OPTION) {
 				int num = Integer.parseInt(tfNum.getText());
 				dba.friendDelete(num);
-				ta.setText(tfNum.getText()+"�? ?��?��?��?��?��?��?��.");
+				ta.setText(tfNum.getText()+"삭제 되었음.");
 					}
 				}
 			});
