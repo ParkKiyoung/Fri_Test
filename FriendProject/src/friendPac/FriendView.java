@@ -131,7 +131,7 @@ public class FriendView extends JFrame {
 
 	private JLabel getLabel() {
 		if (label == null) {
-			label = new JLabel("?���?");
+			label = new JLabel("이름");
 			label.setHorizontalAlignment(SwingConstants.RIGHT);
 			label.setBounds(30, 42, 57, 15);
 		}
@@ -140,7 +140,7 @@ public class FriendView extends JFrame {
 
 	private JLabel getLblNewLabel() {
 		if (lblNewLabel == null) {
-			lblNewLabel = new JLabel("?��?��");
+			lblNewLabel = new JLabel("생일");
 			lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 			lblNewLabel.setBounds(30, 86, 57, 15);
 		}
@@ -149,7 +149,7 @@ public class FriendView extends JFrame {
 
 	private JLabel getLblNewLabel_1() {
 		if (lblNewLabel_1 == null) {
-			lblNewLabel_1 = new JLabel("?��?��번호");
+			lblNewLabel_1 = new JLabel("전화번호");
 			lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
 			lblNewLabel_1.setBounds(30, 125, 57, 15);
 		}
@@ -194,7 +194,7 @@ public class FriendView extends JFrame {
 
 	private JButton getBtnView() {
 		if (btnView == null) {
-			btnView = new JButton("?��체보�?");
+			btnView = new JButton("전체보기");
 			btnView.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					ta.setText("");
@@ -215,7 +215,7 @@ public class FriendView extends JFrame {
 
 	private JButton getBtnInsert() {
 		if (btnInsert == null) {
-			btnInsert = new JButton("추�?");
+			btnInsert = new JButton("추가");
 			btnInsert.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					Friend f = new Friend();
@@ -280,7 +280,7 @@ public class FriendView extends JFrame {
 	private JComboBox getComboBox_1() {
 		if (comSet == null) {
 			comSet = new JComboBox();
-			comSet.setModel(new DefaultComboBoxModel(new String[] { "?��?��?��?��?��", "?���?", "주소" }));
+			comSet.setModel(new DefaultComboBoxModel(new String[] {"선택", "이름", "주소"}));
 			comSet.setBounds(0, 24, 65, 21);
 		}
 		return comSet;
@@ -334,7 +334,7 @@ public class FriendView extends JFrame {
 
 	private JButton getBtnSelect() {
 		if (btnSelect == null) {
-			btnSelect = new JButton("?��?��보기");
+			btnSelect = new JButton("상세보기");
 			btnSelect.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					try {
@@ -360,7 +360,7 @@ public class FriendView extends JFrame {
 
 	private JButton getBtnUpdate() {
 		if (btnUpdate == null) {
-			btnUpdate = new JButton("?��?��");
+			btnUpdate = new JButton("수정");
 			btnUpdate.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 
@@ -383,7 +383,7 @@ public class FriendView extends JFrame {
 
 	private JButton getBtnDelete() {
 		if (btnDelete == null) {
-			btnDelete = new JButton("?��?��");
+			btnDelete = new JButton("삭제");
 			btnDelete.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 			int result = JOptionPane.showConfirmDialog
@@ -403,7 +403,7 @@ public class FriendView extends JFrame {
 
 	private JLabel getLblnum() {
 		if (lblnum == null) {
-			lblnum = new JLabel("고유번호�? ?��?��?��?��?��");
+			lblnum = new JLabel("고유번호입력");
 			lblnum.setBounds(12, 233, 134, 15);
 		}
 		return lblnum;
