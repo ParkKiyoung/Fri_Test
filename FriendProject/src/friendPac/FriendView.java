@@ -312,7 +312,7 @@ public class FriendView extends JFrame {
 						ta.append("이름 : " + arr.get(i).getName() + "\n");
 						ta.append("생년월일 : " + arr.get(i).getBirth() + "\n");
 						ta.append("번호 : " + arr.get(i).getPhone() + "\n");
-						ta.append("addr : " + arr.get(i).getAddr() + "\n\n");
+						ta.append("주소 : " + arr.get(i).getAddr() + "\n\n");
 
 					}
 
